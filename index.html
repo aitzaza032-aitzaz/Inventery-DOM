@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventery checking</title>
+  </head>
+<body>
+  
+ <form onsubmit="Inventry();return false">
+  <div>
+   <div>
+      <label for="invent">Chek Item</label>
+   </div>
+       <input type="text" id="invent">
+  </div>
+    
+     <button type="submit">Get Item Detail</button>
+
+ </form>
+   <h1 id="result">Inventry</h1>
+
+   <script>
+
+function Inventry()
+{
+   let invent=document.getElementById("invent").value;
+   if(invent=="Bottel" || invent=="bottle")
+{
+   document.getElementById("result").innerHTML=(`sorry bottle has no more inventry`)
+}
+else if(invent=="toys" || invent=="toy")
+{
+      document.getElementById("result").innerHTML=(`There are many types of toys.3 `)
+
+}
+else{
+    document.getElementById("result").innerHTML=(`Sorry no inventry found `)
+
+}
+}
+
+
+
+   </script>
+</body>
+</html>
